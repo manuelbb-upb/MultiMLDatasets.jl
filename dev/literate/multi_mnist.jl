@@ -1,5 +1,6 @@
 using Pkg #src
 Pkg.activate(joinpath(@__DIR__, "..", "..")) #src
+ENV["DATADEPS_ALWAYS_ACCEPT"] = true #src
 
 # # Default 2-Task MNIST data
 
