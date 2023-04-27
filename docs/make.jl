@@ -1,7 +1,18 @@
+using Pkg
+Pkg.activate(@__DIR__)
+
 using MultiMLDatasets
 using Documenter
 
 DocMeta.setdocmeta!(MultiMLDatasets, :DocTestSetup, :(using MultiMLDatasets); recursive=true)
+
+using Literate
+
+Literate.markdown(
+    joinpath(@__DIR__, "src", "literate", "multi_mnist.jl"), 
+    joinpath(@__DIR__, "src");
+    flavor = Literate.DocumenterFlavor()
+)
 
 makedocs(;
     modules=[MultiMLDatasets],
@@ -16,6 +27,7 @@ makedocs(;
     ),
     pages=[
         "Home" => "index.md",
+        "MultiMNIST" => "multi_mnist.md",
     ],
 )
 
