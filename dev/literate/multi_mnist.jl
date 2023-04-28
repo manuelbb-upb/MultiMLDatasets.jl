@@ -1,6 +1,9 @@
+# This file is formated using Literate.jl. #src
+# Lines ending with `#src` are filtered out before execution. #src
+# Lines ending with `#hide` are not filtered, only their return values. #src
 using Pkg #src
 Pkg.activate(joinpath(@__DIR__, "..", "..")) #src
-ENV["DATADEPS_ALWAYS_ACCEPT"] = true #src
+ENV["DATADEPS_ALWAYS_ACCEPT"] = true; # This line is for CI on github #hide
 
 # # Default 2-Task MNIST data
 
