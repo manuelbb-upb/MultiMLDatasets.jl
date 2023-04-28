@@ -2,6 +2,11 @@
 EditURL = "<unknown>/docs/src/literate/multi_mnist.jl"
 ```
 
+````@example multi_mnist
+ENV["DATADEPS_ALWAYS_ACCEPT"] = true; # This line is for CI on github #hide
+nothing #hide
+````
+
 # Default 2-Task MNIST data
 
 Load the MultiMNIST training data formatted similarly to how its done
@@ -42,7 +47,7 @@ plot_mmnist(mmnist_test, 1)
 ````
 
 # Custom Format
-The keywoard arguments
+The keyword arguments
 * `top_left_corner_left`
 * `top_left_corner_right`
 * `newimg_size`
