@@ -30,6 +30,7 @@ plot_mmnist(mmnist_test, 1)
 # # Easier tasks:
 mmnist = LeftRightMNIST(; force_recreate=true)
 plot_mmnist(mmnist, 1)
+#-------
 mmnist_test = LeftRightMNIST(:test; force_recreate=true)
 plot_mmnist(mmnist_test, 1)
 
